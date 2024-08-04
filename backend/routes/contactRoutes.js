@@ -5,6 +5,7 @@ const router  = express.Router();
 
 //controllers
 const {getContacts, createContact, getContact, updateContact, deleteContact} = require("../controllers/contactController");
+const validateToken = require("../middleware/validateTokenHandler");
 
 // router.route("/").get(getContacts);
 // router.route("/").post(createContact);
@@ -12,6 +13,9 @@ const {getContacts, createContact, getContact, updateContact, deleteContact} = r
 // router.route("/:id").get(getContact);
 // router.route("/:id").put(updateContact);
 // router.route("/:id").delete(deleteContact);
+ 
+//adding validate token to make the path private
+router.use(validateToken);
 
 //combined routes which are with similar routing path
 router.route("/").get(getContacts).post(createContact);
