@@ -1,7 +1,7 @@
 {
   "name": "backend-api",
   "version": "1.0.0",
-  "description": "this is project for my backend api",
+  "description": "this is a project to learn about backend and api endpoints creation using mongodb and express",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
